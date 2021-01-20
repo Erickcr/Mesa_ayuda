@@ -1,0 +1,25 @@
+#seleccionar{
+    border: 2px solid #0D65D9;
+    border-radius: 3px;
+    transition: background-color 0.1s linear 0.0s;
+}
+#seleccionar:hover {
+    background-color: #0D65D9;
+    border: 2px solid #0D65D9
+}
+
+#subraya:hover{
+    color: white;
+}
+
+#subraya:link, #subraya:visited, #subraya:active {
+    text-decoration:none;
+} 
+
+.dropdown-menu {opacity:0;}
+.dropdown-menu.show {opacity:1;}
+
+#accion{
+    width: 100px;
+  overflow: auto;
+}

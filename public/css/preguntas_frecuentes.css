@@ -1,0 +1,23 @@
+#btn-depart{
+    text-align: center;
+
+}
+#btn-ref{
+    font-size: 14.5px;
+}
+
+#seleccionar2{
+    border: 2px solid #0D65D9;
+    transition: background-color 0.1s linear 0.0s;
+}
+#seleccionar2:hover{
+    background-color: #0D65D9;
+    border: 2px solid #0D65D9;
+    color: white;
+}
+#seleccionar2:link, #seleccionar2:visited, #seleccionar2:active{
+    text-decoration:none;
+} 
+ #parrafo-pf{
+    word-break: break-word
+ }
