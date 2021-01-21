@@ -4,13 +4,6 @@ namespace Database\Seeders;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Schema;
-use App\Models\Help_topic;
-use App\Models\Tipo_usuario;
-use App\Models\Departamento;
-use App\Models\User;
-use App\Models\Preguntas_frecuentes;
-use App\Models\Ticket;
 
 class DatabaseSeeder extends Seeder
 {
@@ -21,14 +14,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        Schema::disableForeignKeyConstraints();
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0;');
         DB::table('departamento')->truncate();
         DB::table('tipo_usuario')->truncate();
         DB::table('help_topic')->truncate();
         DB::table('preguntas_frecuentes')->truncate();
         DB::table('users')->truncate();
         DB::table('ticket')->truncate();
-        Schema::enableForeignKeyConstraints();
+        DB::statement('SET FOREIGN_KEY_CHECKS = 1;');
 
         $this->call(departamentoSeeder::class);
         $this->call(tipo_usuarioSeeder::class);
