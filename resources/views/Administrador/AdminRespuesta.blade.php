@@ -93,15 +93,12 @@
                 
                 <br>
                       
-                      
-                        <div class="row form-group">
-                            <button type="submit" class="btn btn-outline-success col-md-9 offset-2">Generar</button>
-
-                        </div>
-
-                        <a href="{{route ('Administrador.Adminticket')}}">
-                        <button type="button" class="btn btn-outline-danger col-md-9 offset-2">Volver</button>
-                        </a>
+                            <div class="row justify-content-around form-group">
+                                <a href="{{ route('Administrador.Adminticket') }}" class="col-8 col-sm-3 col-md-2 mt-1">
+                                    <button type="button" class="btn btn-outline-danger col-12">Cancelar</button>
+                                </a>
+                                <button type="submit" class="btn btn-success  col-7 col-sm-3 col-md-2 mt-1">Generar</button>
+                            </div>
                         
 
 

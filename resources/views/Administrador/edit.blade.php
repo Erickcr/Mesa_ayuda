@@ -46,7 +46,7 @@
                             </div>
 
                             <div class="row justify-content-around form-group">
-                                <a href="{{ route('JefeArea.JefeUsuarios') }}" class="col-8 col-sm-3 col-md-2 mt-1">
+                                <a href="{{ route('Administrador.Usuarios') }}" class="col-8 col-sm-3 col-md-2 mt-1">
                                     <button type="button" class="btn btn-outline-danger col-12">Cancelar</button>
                                 </a>
                                 <button type="submit" class="btn btn-success  col-7 col-sm-3 col-md-2 mt-1">Modificar</button>

@@ -28,16 +28,10 @@
 
                                 <div class="col-lg-3 col-8 my-1">
                                     <input type="text" name="name" class="form-control" placeholder="Introduce el nombre" required autofocus>
-                                    <div class="col-12 valid-feedback">
-                                        Valido
-                                    </div>
                                 </div>
                             
                                 <div class="col-lg-4 col-8 my-1">
                                     <input type="text" id="apellidos" name="apellidos" class="form-control" placeholder="Introduce los apellidos" required>
-                                    <div class="col-12 valid-feedback">
-                                        Valido
-                                    </div>
                                 </div>
                             </div>
 
@@ -48,9 +42,6 @@
 
                                 <div class="col-lg-7 col-8">
                                     <input type="email" name="email" class="form-control" placeholder="Introduce el correo electrónico" required>
-                                    <div class="col-12 valid-feedback">
-                                        Valido
-                                    </div>
                                 </div>
                             </div>
 
@@ -61,9 +52,6 @@
 
                                 <div class="col-lg-7 col-8">
                                     <input type="password" name="password" class="form-control" placeholder="Introduce la contraseña" required>
-                                    <div class="col-12 valid-feedback">
-                                        Valido
-                                    </div>
                                     <small>La contraseña que proporciones es temporal y deberá ser cambiada cuando el usuario ingrese por primera vez.</small>
                                 </div>
                             </div>
