@@ -9,6 +9,8 @@ use Illuminate\Routing\Controller;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 use Laravel\Fortify\Contracts\RegisterResponse;
 use Laravel\Fortify\Contracts\RegisterViewResponse;
+use App\Models\Tipo_usuario;
+use Illuminate\Support\Facades\Auth;
 
 class RegisteredUserController extends Controller
 {
@@ -22,7 +24,7 @@ class RegisteredUserController extends Controller
     /**
      * Create a new controller instance.
      *
-     * @param  \Illuminate\Contracts\Auth\StatefulGuard  $guard
+     * @param  \Illuminate\Contracts\Auth\StatefulGuard
      * @return void
      */
     public function __construct(StatefulGuard $guard)
@@ -36,9 +38,11 @@ class RegisteredUserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Laravel\Fortify\Contracts\RegisterViewResponse
      */
-    public function create(Request $request): RegisterViewResponse
+    public function create(Request $request)
     {
-        return app(RegisterViewResponse::class);
+        $usuario = Tipo_usuario::All()->except([4,5]);
+         
+        return view ('auth.register', compact('usuario') );
     }
 
     /**
@@ -49,12 +53,15 @@ class RegisteredUserController extends Controller
      * @return \Laravel\Fortify\Contracts\RegisterResponse
      */
     public function store(Request $request,
-                          CreatesNewUsers $creator): RegisterResponse
+                          CreatesNewUsers $creator)
     {
         event(new Registered($user = $creator->create($request->all())));
-
+    
         $this->guard->login($user);
-
-        return app(RegisterResponse::class);
+       
+        return view('Tablero.Tablero');
+            
+       
+       
     }
 }
