@@ -30,7 +30,7 @@
                          <div class="my-1 p-4 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
 
                             <!-- Article -->
-                            <article class=" p-3 overflow-hidden rounded-lg shadow-lg {{ $ticket->estado == 'Respondido' ? 'bg-green-300 hover:bg-green-500 animate-pulse' : ($ticket->estado == 'Pendiente' ? 'bg-red-300 hover:bg-red-500' : ($ticket->estado == 'Canalizado' ? 'bg-orange-300 hover:bg-orange-500' : '' ) )}} ">
+                            <article class=" p-3 overflow-hidden rounded-lg shadow-lg {{ $ticket->estado == 'Atendido' ? 'bg-green-300 hover:bg-green-500 animate-pulse' : ($ticket->estado == 'Pendiente' ? 'bg-red-300 hover:bg-red-500' : ($ticket->estado == 'Canalizado' ? 'bg-orange-300 hover:bg-orange-500' : '' ) )}} ">
                                 <header class="flex items-center justify-between leading-tight p-2 md:p-4">
                                     <h1 class="text-lg">
                                         <a class="no-underline  text-black hover:no-underline" href="{{ route('ticket.mostrar',  $ticket->id ) }}">

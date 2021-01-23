@@ -51,7 +51,7 @@
                             <img src="{{asset('imagenes/university.png')}}" width="25" height="25"
                                 class="d-inline-block align-top" alt="logo" loading="lazy">
                             <p class="text-white ml-2 my-2">Campus I</p>
-                            <p class="text-white ml-5">Avenida Tecnológico #1500 Col. Lomas de Santiaguito. Morelia, Mich.
+                            <p class="text-white ml-5">Avenida Tecnológico #1500 Col. Lomas de Santiaguito. Morelia, Michoacán.
                             </p>
     
                         </div>
@@ -62,7 +62,7 @@
                                 class="d-inline-block align-top" alt="logo" loading="lazy">
                             <p class="text-white ml-2 my-2">Campus II</p>
                             <p class="text-white  ml-5">Camino de la Arboleda S/N Residencial San Jose de la Huerta Tenencia
-                                Morelos. Morelia, Mich.</p>
+                                Morelos. Morelia, Michoacán.</p>
     
                         </div>
                     </div>
@@ -83,7 +83,7 @@
     
                 <div class="row mt-5">
                     <div class="col-xs-4 col-sm-4 col-md-4 mt-5 text-white text-center">
-                        <p>Pagina creada AKEES 2020. </p>
+                        <p>Pagina creada por AKEES 2020. </p>
                     </div>
                     <div class="col-xs-4 col-sm-4 col-md-4 jutify-center text-white">
                         <p class="text-white d-flex justify-content-center">Siguenos</p>

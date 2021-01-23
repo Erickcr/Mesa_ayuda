@@ -13,7 +13,7 @@ class RespuestaController extends Controller
         $ticket = Ticket::find($id);
         $data=collect([
             ['id_estado'=>'Canalizado','estado' => 'Canalizado'],
-            ['id_estado'=>'Respondido','estado' => 'Respondido'],
+            ['id_estado'=>'Atendido','estado' => 'Atendido'],
         ]);
         $estado=$data->pluck('id_estado', 'estado');
         $estado->all();

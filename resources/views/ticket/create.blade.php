@@ -31,7 +31,7 @@
                 </div>
 
                 <div class="mb-2">
-                    <input type="file" name="file" required class="form-control ">
+                    <input type="file" name="file" class="form-control ">
                 </div>
 
                 <button type="submit" class="boton ">Crear ticket</button>

@@ -81,14 +81,6 @@
                                 {{ __('Preguntas Frecuentes') }}
                             </x-nav-link>
 
-                            <x-nav-link class="text-white"  href="{{ route('Contacto') }}" :active="request()->routeIs('Contacto')">
-                                {{ __('Contacto') }}
-                            </x-nav-link>
-
-                            <x-nav-link class="text-white"  href="{{ route('Acerca_de') }}" :active="request()->routeIs('Acerca_de')">
-                                {{ __('Acerca de') }}
-                            </x-nav-link>
-
                         </div>
                     </div>
                    
@@ -128,14 +120,6 @@
 
                     <x-responsive-nav-link   href="{{ route('preguntasfrecuentes.index') }}" :active="request()->routeIs('preguntasfrecuentes.index')">
                         {{ __('Preguntas Frecuentes') }}
-                    </x-responsive-nav-link>
-                
-                    <x-responsive-nav-link   href="{{ route('Contacto') }}" :active="request()->routeIs('Contacto')">
-                        {{ __('Contacto') }}
-                    </x-responsive-nav-link>
-                
-                    <x-responsive-nav-link    href="{{ route('Acerca_de') }}" :active="request()->routeIs('Acerca_de')">
-                        {{ __('Acerca de') }}
                     </x-responsive-nav-link>
             
                     <x-responsive-nav-link   href="{{ route('login') }}" :active="request()->routeIs('login')">
@@ -234,7 +218,7 @@
                             <img src="{{asset('imagenes/university.png')}}" width="25" height="25"
                                 class="d-inline-block align-top" alt="logo" loading="lazy">
                             <p class="text-white ml-2 my-2">Campus I</p>
-                            <p class="text-white ml-5">Avenida Tecnológico #1500 Col. Lomas de Santiaguito. Morelia, Mich.
+                            <p class="text-white ml-5">Avenida Tecnológico #1500 Col. Lomas de Santiaguito. Morelia, Michoacán.
                             </p>
     
                         </div>
@@ -245,7 +229,7 @@
                                 class="d-inline-block align-top" alt="logo" loading="lazy">
                             <p class="text-white ml-2 my-2">Campus II</p>
                             <p class="text-white  ml-5">Camino de la Arboleda S/N Residencial San Jose de la Huerta Tenencia
-                                Morelos. Morelia, Mich.</p>
+                                Morelos. Morelia, Michoacán.</p>
     
                         </div>
                     </div>

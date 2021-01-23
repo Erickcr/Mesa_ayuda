@@ -25,12 +25,13 @@
                                 <table class="table table-bordered table-striped table-hover">
                                     <thead class="">
                                         <tr>
-                                            <th scope="col"># Ticket</th>
+                                            <th scope="col">Ticket No.</th>
                                             <th scope="col">Tema de ayuda</th>
                                             <th scope="col">Nombre del usuario</th>
                                             <th scope="col">Estatus del ticket</th>
                                             <th scope="col">Asunto del ticket</th>
                                             <th scope="col">Fecha de creación</th>
+                                            <th scope="col">Última modificación</th>
                                             <th scope="col" id="accion">Acciones</th>
                                         </tr>
                                     </thead>
@@ -43,6 +44,7 @@
                                                 <td>{!! $nuevo->estado !!}</td>
                                                 <td style="max-width: 40px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;">{!! $nuevo->asunto !!}</td>
                                                 <td>{!! $nuevo->created_at !!}</td>
+                                                <td>{!! $nuevo->updated_at !!}</td>
                                                 <td>
                                                     <div class="dropdown text-center">
                                                         <button class="btn" id="dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

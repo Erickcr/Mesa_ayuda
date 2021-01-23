@@ -15,9 +15,9 @@
                     </svg>
                     <label class="font-bold">Ticket No.</label><br>
                     <p># {{ $ticket->id }}</p><br>
-                    @if ($ticket->estado == 'Respondido')
+                    @if ($ticket->estado == 'Atendido')
                     <div class="flex">
-                        <P class="text-left text-green-500">Tu ticket ha sido respondido</P>
+                        <P class="text-left text-green-500">Tu ticket ha sido atendido</P>
                         <div class="text-left animate-ping ml-2 mt-2 bg-green-500 rounded-full h-3 w-3  "></div>
                     </div>
                     @elseif($ticket->estado == 'Canalizado')
@@ -28,7 +28,7 @@
 
                     @else
                     <div class="flex">
-                        <P style="color:red" class="text-left">Tu ticket aún no ha sido respondido.</P>
+                        <P style="color:red" class="text-left">Tu ticket aún no ha sido atendido.</P>
                         <div class="text-left animate-ping ml-2 mt-2 bg-red-500 rounded-full h-3 w-3  "></div>
                     </div>
                     @endif
@@ -64,7 +64,7 @@
                 <label class=" text-gray-400 leading-none text-sm ">Asunto </label><br>
                 <div class="p-2  block bg-gray-200 rounded text-gray-700 select-none border-gray-400 border-2">
                      {{$ticket->asunto }} </div><br>
-                    @if($ticket->estado == 'Respondido' || $ticket->estado == 'Canalizado')
+                    @if($ticket->estado == 'Atendido' || $ticket->estado == 'Canalizado')
                     <label class=" text-gray-400 leading-none text-sm ">Respuesta </label><br>
                     <div class="p-2 block bg-gray-200 rounded text-gray-700 border-gray-400 border-2"> 
                         {{ $ticket->respuesta }} </div><br>

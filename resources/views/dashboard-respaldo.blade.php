@@ -68,9 +68,9 @@
 
                 <div class="container">
                     <div class="text-center">
-                        <p class="h4 justify-content-center capitalize "><strong>coordinación de educación continua y a
-                                distancia</strong></p>
-                        <p class="h4 justify-content-center capitalize">instituto tecnólogico de morelia</p>
+                        <p class="h4 justify-content-center"><strong>Coordinación de Educación Continua y a
+                                Distancia</strong></p>
+                        <p class="h4 justify-content-center">Instituto Tecnólogico de Morelia</p>
                         <br>
                     </div>
 
@@ -126,7 +126,7 @@
 
                     </div>
                 </div>
-                <p class="mt-5 d-flex  h3 justify-content-center"><strong>¿Qué ofrece ésta mesa de
+                <p class="mt-5 d-flex  h3 justify-content-center"><strong>¿Qué ofrece esta mesa de
                         servicio?</strong></p>
                 <br>
 

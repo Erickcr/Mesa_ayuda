@@ -24,7 +24,7 @@ class HistorialController extends Controller
     if ($acceso=="4") {
              $historial = DB::table('ticket')
              ->select(DB::raw('count(estado) as NumTick'))
-             ->where('estado', '=', 'Respondido')
+             ->where('estado', '=', 'Atendido')
              ->get();
 
              $canalizados = DB::table('ticket')

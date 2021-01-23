@@ -25,7 +25,7 @@ class NuevosController extends Controller
         $nuevos = DB::table('ticket')
         ->join('help_topic','ticket.id_help_topic','=','help_topic.id')
         ->join('users','ticket.id_usuario','=','users.id')
-        ->select('ticket.id','ticket.estado','ticket.asunto','ticket.created_at','help_topic.help_topic','users.name')
+        ->select('ticket.id','ticket.estado','ticket.asunto','ticket.created_at','ticket.updated_at','help_topic.help_topic','users.name')
         ->where('ticket.estado','=','Pendiente')
         ->orderBy('id', 'DESC')
         ->paginate(5);

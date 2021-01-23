@@ -12,11 +12,11 @@
 
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <strong>Preguntas Frecuentes</strong>
+                            <strong>Preguntas frecuentes</strong>
                         </div> <br>
 
                         <a href="{{route ('AdminPreguntas.añadirPreguntas')}}">
-                            <button type="button" class="btn btn-success">Nueva Pregunta</button><br>
+                            <button type="button" class="btn btn-success">Nueva pregunta</button><br>
                         </a> <br>
 
                         @if ($pregunta->isEmpty())

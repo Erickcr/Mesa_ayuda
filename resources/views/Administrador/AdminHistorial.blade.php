@@ -9,7 +9,7 @@
                 <div class="panel-heading">
                     <h1 style="text-align:center;"><strong>Historial de Tickets</strong></h1>
                     <br>
-                    <p>En este historial verás los tickets que han sido respondidos, estan canalizados o estan en
+                    <p>En este historial verás los tickets que han sido atendidos, canalizados o estan en
                         proceso. Así como una gráfica de los tickets que han llegado en estos meses.</p>
                 </div>
                 <br>
@@ -22,13 +22,13 @@
                         <div class="card-body hover:bg-green-600 select-none">
                              
                             @if($historia->NumTick == 0)
-                            <h5 class="card-title"><strong>TICKETS RESPONDIDOS</strong></h5>
-                                <p class="card-text">Están respondidos un total de <strong>{!! $historia -> NumTick
+                            <h5 class="card-title"><strong>TICKETS ATENDIDOS</strong></h5>
+                                <p class="card-text">Están atendidos un total de <strong>{!! $historia -> NumTick
                                         !!}</strong> tickets.</p>
                             @else
-                            <a href="{{ route('admin.mostrar', 'Respondido') }}" class=" hover:no-underline no-underline hover:text-white">
-                                <h5 class="card-title"><strong>TICKETS RESPONDIDOS</strong></h5>
-                                <p class="card-text">Están respondidos un total de <strong>{!! $historia -> NumTick
+                            <a href="{{ route('admin.mostrar', 'Atendido') }}" class=" hover:no-underline no-underline hover:text-white">
+                                <h5 class="card-title"><strong>TICKETS ATENDIDOS</strong></h5>
+                                <p class="card-text">Están ATENDIDOS un total de <strong>{!! $historia -> NumTick
                                         !!}</strong> tickets.</p>
                             </a>
                             @endif

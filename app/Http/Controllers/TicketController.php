@@ -56,7 +56,7 @@ class TicketController extends Controller
         */
          
         foreach ($tickets as $ticket) {
-            if ($ticket->estado != "Respondido") {
+            if ($ticket->estado != "Atendido") {
                 return back()->with('status', 'Solo puedes tener 1 ticket activo!');
             }
             
@@ -100,6 +100,15 @@ class TicketController extends Controller
         if ($acceso=="4") {
             return view('Administrador.Administrador', compact('user'));         
         }
+        if($request->file==""){
+        $tickets = new Ticket();       
+        $tickets->id_help_topic = $request->id_help_topic;
+        $tickets->id_usuario = Auth::user()->id;
+        $tickets->estado = 'Pendiente';
+        $tickets->asunto = $request->asunto;
+        $tickets->save();
+        }
+        else{
         $fileName = time().'.'.$request->file->extension();  
         
         $request->file->move(public_path('storage/Archivos'), $fileName);
@@ -111,7 +120,7 @@ class TicketController extends Controller
         $tickets->asunto = $request->asunto;
         $tickets->file = $fileName;       
         $tickets->save();
-        
+        }
         return redirect()->route('ticket.show', $tickets);
     }
 
@@ -195,7 +204,7 @@ class TicketController extends Controller
         ->where('ticket.estado', '=', $estado)
         ->join('help_topic','ticket.id_help_topic','=','help_topic.id')
         ->join('users','ticket.id_usuario','=','users.id')
-        ->select('ticket.id','ticket.estado','ticket.asunto','ticket.created_at','help_topic.help_topic','users.name')
+        ->select('ticket.id','ticket.estado','ticket.asunto','ticket.created_at','ticket.updated_at','help_topic.help_topic','users.name')
         ->orderBy('id', 'DESC')
         ->paginate(5);
         return view('Administrador.Adminticket')->with('nuevos',$nuevos) ;

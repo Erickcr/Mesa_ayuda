@@ -95,7 +95,7 @@
                     </div>
 
                     @elseif(Auth::user()->id_tipo_usuario == 5)
-                    <x-nav-link class="text-white" href="" :active="request()->routeIs('Administrador.Adminticket')">
+                    <x-nav-link class="text-white" href="{{ route('JefeArea.JefeTicket') }}" :active="request()->routeIs('JefeArea.JefeTicket')">
                         {{ __('Nuevos tickets') }}
                     </x-nav-link>
 
@@ -110,18 +110,6 @@
                     <x-nav-link class="text-white" href="{{ route('Acerca_de') }}"
                         :active="request()->routeIs('Acerca_de')">
                         {{ __('Acerca de') }}
-                    </x-nav-link>
-
-
-                    <x-nav-link class="text-white" href="{{ route('Servicios') }}"
-                        :active="request()->routeIs('Servicios')">
-                        {{ __('Servicios') }}
-                    </x-nav-link>
-
-
-                    <x-nav-link class="text-white" href="{{ route('Contacto') }}"
-                        :active="request()->routeIs('Contacto')">
-                        {{ __('Contacto') }}
                     </x-nav-link>
                     @endif
                 </div>
@@ -281,16 +269,6 @@
             @else
             <x-responsive-nav-link href="{{ route('Acerca_de') }}" :active="request()->routeIs('Acerca_de')">
                 {{ __('Acerca de') }}
-            </x-responsive-nav-link>
-
-
-            <x-responsive-nav-link href="{{ route('Servicios') }}" :active="request()->routeIs('Servicios')">
-                {{ __('Servicios') }}
-            </x-responsive-nav-link>
-
-
-            <x-responsive-nav-link href="{{ route('Contacto') }}" :active="request()->routeIs('Contacto')">
-                {{ __('Contacto') }}
             </x-responsive-nav-link>
             @endif
 
